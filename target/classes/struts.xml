@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+
+<package name="default" extends="struts-default">
+
+	<default-action-ref name="index" />
+	<action name="login" class="com.dls.struts.action.LoginAction">
+		<result name="success">/dashboard.jsp</result>
+		<result name="error">/error.jsp</result>
+		<result name="input">/index.jsp</result>
+	</action>
+	<action name="logout" class="com.dls.struts.action.LogoutAction" method="logout">
+		<result name="success">/index.jsp</result>
+	</action>
+	<action name="welcome" class="com.dls.struts.action.WelcomeAction">
+		<result name="success">/dashboard.jsp</result>
+		<result name="error">/index.jsp</result>
+	</action>
+	<action name="student" class="com.dls.struts.action.StudentAction">
+		<result name="success">/Student.jsp</result>
+		<result name="error">/index.jsp</result>
+	</action>
+	<action name="createStudent" class="com.dls.struts.action.StudentAction" method="create">
+		<result name="success">/addstudent.jsp</result>
+	</action>
+	<action name="addstudent" class="com.dls.struts.action.StudentAction" method="addStu">
+		<result name="success">/addstudent.jsp</result>
+	</action>
+	<action name="course" class="com.dls.struts.action.CourseAction">
+		<result name="success">/courses.jsp</result>
+	</action>
+	<action name="index" class="com.dls.struts.action.IndexAction">
+		<result name="success">/index.jsp</result>
+	</action>
+	
+</package>
+
+</struts>
