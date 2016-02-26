@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection properties - Driver, URL, user, password -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/fxlmsapp</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">asnaeb</property>
+         
+        <!-- org.hibernate.HibernateException: No CurrentSessionContext configured! -->
+        <property name="hibernate.current_session_context_class">thread</property>
+         
+        <!-- Mapping with model class containing annotations -->
+        <mapping class="com.dls.model.fxlms_user"/>
+        <mapping class="com.dls.model.Course"/>
+        <mapping class="com.dls.model.Student"/>
+    </session-factory>
+</hibernate-configuration>

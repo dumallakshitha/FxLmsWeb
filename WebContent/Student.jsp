@@ -22,7 +22,11 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootbox.js"></script>
+	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,6 +34,35 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<script>
+	
+		function getConfirmation(){
+	        /*var retVal = confirm("Do you want to continue ?");
+	        if( retVal == true ){
+	           document.write ("User wants to continue!");
+	           return true;
+	        }
+	        else{
+	           Document.write ("User does not want to continue!");
+	           return false;
+	        }*/
+			/*BootstrapDialog.confirm('Hi Apple, are you sure?', function(result){
+	            if(result) {
+	                alert('Yup.');
+	            }else {
+	                alert('Nope.');
+	            }
+	        });*/
+			bootbox.confirm("Are you sure?", function(result) {
+			    if (result) {
+			        console.log("User confirmed dialog");
+			    } else {
+			        console.log("User declined dialog");
+			    }
+			});
+	     }
+		
+		
+
 	
 		function check(){
 			
@@ -275,7 +308,7 @@
 															<td><s:property value="tp1"/></td>
 															<td><s:property value="mobile"/></td>
 															<td>
-																<button type="button" class="btn btn-xs btn-primary" id="button" onclick="check()">Edit</button>
+																<button type="button" class="btn btn-xs btn-primary" id="button" onclick="getConfirmation()">Edit</button>
 																<button type="button" class="btn btn-xs btn-danger">Delete</button>
 															</td>
 														</tr>
@@ -283,9 +316,7 @@
 				                                </tbody>
 				                            </table>		
 										</div>
-										<ul class="list-group">
-											
-										</ul>
+	
 									</div>
 								</div>
 								<!-- /.row -->

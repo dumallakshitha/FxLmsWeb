@@ -196,7 +196,7 @@
 						<!-- <div class="panel-content"> -->
 						<!-- <div class="row"> -->
 
-							<form role="form" action="createStudent">
+							<form role="form" action="createStudent" method="post">
 								<div class="row">
 									<div class="col-lg-2">								
 											<h5>E-mail Address:</h5>																					
@@ -213,8 +213,8 @@
 									</div>
 									<div class="col-lg-3">
 										<div class="form-group">
-											<select class="form-control" id="country"
-												style="width: 100%;" name="countryid">
+											<select class="form-control" id="countryid"
+												style="width: 100%;" name="country">
 												<option value="0">-- Select Country --</option>
 												<option value="3">Afghanistan</option>
 												<option value="15">Åland</option>
@@ -481,7 +481,7 @@
 									<div class="col-lg-3">
 										<div class="form-group">
 											<select class="form-control" id="prefix"
-												style="width: 100%;" name="prefix">
+												style="width: 100%;" name="title">
 												<option value="Mr">Mr</option>
 												<option value="Mrs">Mrs</option>
 												<option value="Miss">Miss</option>

@@ -14,20 +14,8 @@ public class Student implements Serializable{
 	private int student_Id;
 	@Id
 	private String email;
-	private String country;
+	private int country;
 	private String title;
-	public String getCountry() {
-		return country;
-	}
-	public void setCountry(String country) {
-		this.country = country;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
 	private String f_Name;
 	private String l_Name;
 	private String address1;
@@ -37,6 +25,28 @@ public class Student implements Serializable{
 	private int tp1;
 	private int tp2;
 	private int mobile;
+	private String status;
+	
+	public int getCountry() {
+		return country;
+	}
+	public void setCountry(int country) {
+		this.country = country;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public int getStudent_Id() {
 		return student_Id;
 	}

@@ -14,7 +14,7 @@ public class StudentAction extends ActionSupport implements SessionAware{
 	public static Map<String,Object> sessionMap;
 	public List<Student> list;
 	public String email;
-	public String country;
+	public int country;
 	public String title;
 	public String f_Name;
 	public String l_Name;
@@ -25,6 +25,7 @@ public class StudentAction extends ActionSupport implements SessionAware{
 	public int tp1;
 	public int tp2;
 	public int mobile;
+
 	
 	public String execute(){
 		
@@ -38,7 +39,10 @@ public class StudentAction extends ActionSupport implements SessionAware{
 	}
 	
 	public String create(){
+		System.out.println("ecdecec");
 		Student ob=new Student();
+		System.out.println(f_Name);
+		System.out.println(address1);
 		ob.setEmail(email);
 		ob.setTitle(title);
 		ob.setCountry(country);
@@ -51,8 +55,7 @@ public class StudentAction extends ActionSupport implements SessionAware{
 		ob.setTp1(tp1);
 		ob.setTp2(tp2);
 		ob.setMobile(mobile);
-		
-		
+		ob.setStatus("Active");		
 		HibernateHelper.create(ob);
 		return "success";
 	}
@@ -67,6 +70,9 @@ public class StudentAction extends ActionSupport implements SessionAware{
 		this.sessionMap = map;
 	}
 	
-	
+	@Override
+    public void validate(){
+        
+    }
 	
 }

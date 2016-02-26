@@ -7,10 +7,12 @@ body {
   background:#333 ;
 }
 
+#mydiv{
+	 background:#333 ;
+}
+
 form {
- 	background:#111; 
-  width:300px;
-  margin:30px auto;
+  background:#111; 
   border-radius:0.4em;
   border:1px solid #191919;
   overflow:hidden;

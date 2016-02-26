@@ -172,16 +172,16 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="lecturer"><i class="fa fa-user"></i> Lecturers</a>
+                        <a href="addLecturer"><i class="fa fa-user"></i> Lecturers</a>
                     </li>
                     <li>
-                        <a href="enroll"><i class="fa fa-fw fa-table"></i> Enrollments</a>
+                        <a href="registerStu"><i class="fa fa-fw fa-table"></i> Enrollments</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="#">Dropdown Item</a>
+                                <a href="register">Register</a>
                             </li>
                             <li>
                                 <a href="#">Dropdown Item</a>
